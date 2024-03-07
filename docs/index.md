@@ -1,6 +1,4 @@
-# Collaborative OER Mathematics Textbooks
-
-## Creating Better Free and Open Mathematics Textbooks. Together.
+# Creating Better Free and Open Mathematics Textbooks. Together.
 
 Welcome to the COMaT project, a space to improve the Open Educational Resources for mathematics and related disciplines.
 
