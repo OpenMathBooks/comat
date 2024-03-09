@@ -25,9 +25,9 @@ The goal of the workshop is to build connections between faculty at different in
 
 **Stipend**: Workshop participants who commit to working on their projects over the next year will receive a stipend of $1500.
 
-**Travel support**: We have limited funding to support travel, with priority for participants who will also register for the (free) Colorado OER Conference.
+**Travel support**: We have limited funding to support travel, with priority for participants who will also register for the (free) [Colorado OER Conference](https://sites.google.com/view/2024coloradooerconference/home){:target="_blank"}.
 
-**Application/Registration**: Interested faculty should [apply and register through this link](https://forms.gle/REwa2ZYcuWmFVKTq7){:target="_blank"} before May 1, 2024.
+**Application/Registration**: Interested faculty should [apply and register through this link](https://forms.gle/REwa2ZYcuWmFVKTq7){:target="_blank"} before May 1, 2024.  
 
 Note that in case we have more applications than available spots, we will prioritize funding support for faculty and teams who identify high impact gtPathways courses for their project.
 
