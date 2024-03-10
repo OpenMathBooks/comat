@@ -3,7 +3,7 @@
 
 Welcome to the COMaT project, a space to improve the Open Educational Resources for mathematics and related disciplines.
 
-Imagine a free online textbook that includes interactive assessments that students can complete directly in the book for credit.  No separate online homework system to manage (or pay for); everything is in one place.  Imagine such a book is accessible and culturally responsive to changing student demographics.  Working together, we can begin the tourney toward achieving this vision to improve outcomes for all our students.
+Imagine a free online textbook that includes interactive assessments that students can complete directly in the book for credit.  No separate online homework system to manage (or pay for); everything is in one place.  Imagine such a book is accessible and culturally responsive to changing student demographics.  Working together, we can begin the journey toward achieving this vision to improve outcomes for all our students.
 
 We invite you and your colleagues to collaborate on textbook projects to support high-enrollment courses mathematics, computer science, and statistics across Colorado.  
 
