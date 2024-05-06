@@ -60,16 +60,34 @@
 
     <note>  
       <p>
-        Note that generating assets requires additional software, like <latex /> or Sage.  Depending on your codespace setup, you can likely fix erorrs by entering the following command in the terminal:
-      </p>
-      <pre>
-        sudo bash ./.devcontainer/postCreateCommand.sh
-      </pre>
-      <!-- <p>
-        Alternatively, when you create a codespace, you can click the three dots next to the + and select the devcontainer that has <q>pretext-full</q> in its name. 
-      </p> -->
-      <p>
-        Once you install this software once, you should be good to go as long as your codespace exists.
+        Note that generating assets requires additional software, like <latex /> or Sage.  Depending on your codespace setup, you can likely fix erorrs as follows.
+        <ol>
+          <li>
+            <p>
+              Open the file <c>.devcontainer.json</c>
+            </p>
+          </li>
+          <li>
+            <p>
+              Delete the first line of the file (so that pretext doesn't <q>fix</q> it for you).
+            </p>
+          </li>
+          <li>
+            <p>
+              Comment out line 18 (add two forward slashes).
+            </p>
+          </li>
+          <li>
+            <p>
+              Uncomment line 20 (remove the two forward slashes).
+            </p>
+          </li>
+          <li>
+            <p>
+              After saving, vs-code should offer to rebuild your <q>container,</q> which you should do.  Otherwise, clicking the gree button in the bottom of the window (labeled <q>Codespaces</q>) and selecting <q>Rebuild Container</q> should get you set up correctly.
+            </p>
+          </li>
+        </ol>
       </p>
     </note>
   </section>

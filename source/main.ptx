@@ -7,10 +7,10 @@
 
   <!-- The <book> tags wrap all the content.  Change the @xml:id   -->
   <!-- to some short (non-spaced) description of your book         -->
-  <book xml:id="ptx-workshop-2023">
+  <book xml:id="comat-workshop-2024">
     <!-- The book needs a title and can have a subtitle  -->
     <title>Getting Started with PreTeXt</title>
-    <subtitle>Virtual Workshop 2023</subtitle>
+    <subtitle>COMaT Workshop, May 2024</subtitle>
 
     <!-- Now we include files containing each main devision.       -->
 
