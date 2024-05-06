@@ -1,0 +1,11 @@
+INFO    : PreTeXt-CLI version: 2.4.0
+
+INFO    : PreTeXt project found in `/workspaces/comat`.
+WARNING : Project's CLI version could not be detected from `requirements.txt`.
+WARNING : Try `pretext init --refresh` to produce a compatible file.
+WARNING : A new project.ptx file has been generated at /workspaces/comat/project.ptx.
+WARNING : Your existing project.ptx file has been backed up at /workspaces/comat/project.ptx.bak.
+INFO    : Generated `/workspaces/comat/project.ptx`
+
+INFO    : Success! Your project files have been refreshed. If you manage any of these
+INFO    : manually, be sure to compare these new versions with your old .bak files.
