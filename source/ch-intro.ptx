@@ -515,6 +515,14 @@ runge()
       </sageplot>
   </image>
 </figure>
+
+<p>
+  Videos can be embedded in PreTeXt documents using the <tag>video</tag> element.
+</p>
+<figure xml:id="figure-video">
+  <caption>Video, not from youtube.</caption>
+  <video source="https://embed.api.video/vod/vi4blUQJFrYWbaG44NChkH27" width="75%" />
+</figure>
     </section>
 
 
