@@ -312,7 +312,7 @@ For example, in the HTML build for this document,
 the above proof is knowled by default, and clicking the referenced &lt;q&gt;Claim&lt;/q&gt;
 in the previous paragraph expands its knowl to reveal the claim for the reader.
         &lt;/p&gt;
-        &lt;note&gt;
+        &lt;note xml:id="note"&gt;
             &lt;p&gt;
 Because this document was edited directly on GitHub using Codespaces, and served
 with GitHub pages, finding its source is simple: head to its
@@ -325,6 +325,15 @@ Check the link out to see exactly how each claim, list, etc. in this chapter was
         &lt;/note&gt;
     &lt;/section&gt;
 
+    &lt;section&gt;
+      &lt;title&gt;Links&lt;/title&gt;
+
+      &lt;p&gt;
+        In addition to the ability to reference inside a document, such as this one to &lt;xref ref="note" /&gt;, you can also link to files that you might want readers to download.  Here is an example:
+        &lt;url href="external/sheets/Fibonacci.xlsx" /&gt;.  Note that this file is stored in your &lt;c&gt;assets&lt;/c&gt; folder, and is automatically put in &lt;c&gt;external&lt;/c&gt; when pretext build the file.
+      &lt;/p&gt;
+
+    &lt;/section&gt;
     &lt;section xml:id="sec-figures"&gt;
         &lt;title&gt;Figures and Diagrams&lt;/title&gt;
         &lt;figure xml:id="figure-braille"&gt;
@@ -513,6 +522,18 @@ runge()
       implicit_plot3d(p, (x, -r, r), (y, -r, r), (z, -r, r), plot_points=50, frame=False)
       &lt;/sageplot&gt;
   &lt;/image&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;
+  Videos can be embedded in PreTeXt documents using the &lt;tag&gt;video&lt;/tag&gt; element.
+&lt;/p&gt;
+&lt;figure&gt;
+  &lt;caption&gt;Big Buck Bunny from
+  &lt;url href="http://camendesign.com/code/video_for_everybody/test.htm" visual="camendesign.com/code/video_for_everybody/test.htm"&gt;
+  &lt;q&gt;Video for Everybody&lt;/q&gt;
+  Test Page&lt;/url&gt;
+  &lt;/caption&gt;
+  &lt;video label="big-buck-bunny-frame-one" href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" width="70%" preview="preview/big-buck-bunny-frame-one.jpg" /&gt;
 &lt;/figure&gt;
     &lt;/section&gt;
 
