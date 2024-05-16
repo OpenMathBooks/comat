@@ -312,7 +312,7 @@ For example, in the HTML build for this document,
 the above proof is knowled by default, and clicking the referenced <q>Claim</q>
 in the previous paragraph expands its knowl to reveal the claim for the reader.
         </p>
-        <note>
+        <note xml:id="note">
             <p>
 Because this document was edited directly on GitHub using Codespaces, and served
 with GitHub pages, finding its source is simple: head to its
@@ -326,6 +326,15 @@ useful for leaving notes for yourself or future editors... -->
         </note>
     </section>
 
+    <section>
+      <title>Links</title>
+
+      <p>
+        In addition to the ability to reference inside a document, such as this one to <xref ref="note"/>, you can also link to files that you might want readers to download.  Here is an example:
+        <url href="external/sheets/Fibonacci.xlsx">Fibonacci Excel Spreadsheet</url>.  Note that this file is stored in your <c>assets</c> folder, and is automatically put in <c>external</c> when pretext build the file.
+      </p>
+
+    </section>
     <section xml:id="sec-figures">
         <title>Figures and Diagrams</title>
         <figure xml:id="figure-braille">
@@ -519,9 +528,13 @@ runge()
 <p>
   Videos can be embedded in PreTeXt documents using the <tag>video</tag> element.
 </p>
-<figure xml:id="figure-video">
-  <caption>Video, not from youtube.</caption>
-  <video source="https://embed.api.video/vod/vi4blUQJFrYWbaG44NChkH27" width="75%" />
+<figure>
+  <caption>Big Buck Bunny from
+  <url href="http://camendesign.com/code/video_for_everybody/test.htm" visual="camendesign.com/code/video_for_everybody/test.htm">
+  <q>Video for Everybody</q>
+  Test Page</url>
+  </caption>
+  <video label="big-buck-bunny-frame-one" href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" width="70%" preview="preview/big-buck-bunny-frame-one.jpg" />
 </figure>
     </section>
 
