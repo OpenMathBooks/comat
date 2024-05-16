@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html><body><pre>    &lt;chapter xml:id="ch-exercises"&gt;
+  &lt;title&gt;Practice Activities&lt;/title&gt;
+  &lt;introduction&gt;
+    &lt;p&gt;
+      Let's get our hands dirty and try writing some PreTeXt.  If you have some ideas of what you want to try, go for it.  Otherwise, try to implement as many of the following as you can.  
+      
+    &lt;/p&gt;
+  &lt;/introduction&gt;
+  &lt;section&gt;
+  &lt;title&gt;Basic PreTeXt&lt;/title&gt;
+
+  &lt;exploration&gt;
+    &lt;title&gt;Paragraph contents&lt;/title&gt;
+    &lt;task&gt;
+      &lt;statement&gt;
+        &lt;p&gt;
+          Write a paragraph of text that includes an &lt;em&gt;emphasized&lt;/em&gt; word, a &lt;q&gt;quoted&lt;/q&gt; word, and inline math using a variable like &lt;m&gt;x&lt;/m&gt; or &lt;m&gt;y&lt;/m&gt;.
+        &lt;/p&gt;
+      &lt;/statement&gt;
+    &lt;/task&gt;
+    &lt;task&gt;
+      &lt;statement&gt;
+        &lt;p&gt;
+          Write the definition of a term inside a paragraph (not as a numbered definition).  The defined word should be clear when you ready it.  For example: a &lt;term&gt;slark&lt;/term&gt; is a hybrid of a sloth and a shark.
+        &lt;/p&gt;
+      &lt;/statement&gt;
+    &lt;/task&gt;
+    &lt;task&gt;
+      &lt;statement&gt;
+        &lt;p&gt;
+          Write a paragraph that includes a math equation on a displayed line.  Like this:
+          &lt;me&gt;
+            f(x) = \begin{cases} 1 \amp x = 1 \\ 0 \amp x \ne 1\end{cases}
+          &lt;/me&gt;.
+        &lt;/p&gt;
+      &lt;/statement&gt;
+    &lt;/task&gt;
+  &lt;/exploration&gt;
+
+
+  &lt;exploration&gt;
+    &lt;title&gt;Lists and Paragraphs&lt;/title&gt;
+    &lt;statement&gt;
+      &lt;p&gt;
+        Write a numbered list of your favorite three animals and an unnumbered list of your three favorite numbers (in no particular order).  Put text introducing the lists between them.
+      &lt;/p&gt;
+    &lt;/statement&gt;
+    &lt;hint&gt;
+      &lt;p&gt;
+        You can use the &lt;tag&gt;ol&lt;/tag&gt; tag for ordered lists, and &lt;tag&gt;ul&lt;/tag&gt; for unordered lists.  Each item should be inside &lt;tag&gt;li&lt;/tag&gt;s.  
+      &lt;/p&gt;
+    &lt;/hint&gt;
+    &lt;hint&gt;
+      &lt;p&gt;
+        For the content around the lists, you will want them to be in &lt;tag&gt;p&lt;/tag&gt; tags.  Note also that the list themselves must be nested in these paragraphs.  You can't have lists floating on their own.
+      &lt;/p&gt;
+    &lt;/hint&gt;
+    &lt;solution&gt;
+        &lt;pre&gt;
+          
+&amp;lt;p&amp;gt;
+  Here is my list of animals:
+  &amp;lt;ol&amp;gt;
+    &amp;lt;li&amp;gt;Shark&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;Sloth&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;Slork&amp;lt;/li&amp;gt;
+  &amp;lt;/ol&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;
+  My favorite numbers, in no particular order, happen to be:
+  &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;1&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;2&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;3&amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/p&amp;gt;
+          
+        &lt;/pre&gt;
+    &lt;/solution&gt;
+  &lt;/exploration&gt;
+
+
+  &lt;exploration&gt;
+    &lt;task&gt;
+      &lt;statement&gt;
+        &lt;p&gt;
+          Create the following table using the pretext &lt;c&gt;tabular&lt;/c&gt; environment.
+        &lt;/p&gt;
+        &lt;tabular&gt;
+          &lt;col right="medium" /&gt;&lt;col right="medium" /&gt;&lt;col /&gt; 
+          &lt;row bottom="medium"&gt;
+            &lt;cell&gt;1&lt;/cell&gt;
+            &lt;cell&gt;2&lt;/cell&gt;
+            &lt;cell&gt;3&lt;/cell&gt;
+          &lt;/row&gt;
+          &lt;row&gt;
+            &lt;cell&gt;4&lt;/cell&gt;
+            &lt;cell&gt;5&lt;/cell&gt;
+            &lt;cell&gt;6&lt;/cell&gt;
+          &lt;/row&gt;
+        &lt;/tabular&gt;
+      &lt;/statement&gt;
+      &lt;solution&gt;
+        &lt;pre&gt;
+        
+          &amp;lt;tabular&amp;gt;
+            &amp;lt;col right="medium" /&amp;gt;&amp;lt;col right="medium" /&amp;gt;&amp;lt;col /&amp;gt; 
+            &amp;lt;row bottom="medium"&amp;gt;
+              &amp;lt;cell&amp;gt;1&amp;lt;/cell&amp;gt;
+              &amp;lt;cell&amp;gt;2&amp;lt;/cell&amp;gt;
+              &amp;lt;cell&amp;gt;3&amp;lt;/cell&amp;gt;
+            &amp;lt;/row&amp;gt;
+            &amp;lt;row&amp;gt;
+              &amp;lt;cell&amp;gt;4&amp;lt;/cell&amp;gt;
+              &amp;lt;cell&amp;gt;5&amp;lt;/cell&amp;gt;
+              &amp;lt;cell&amp;gt;6&amp;lt;/cell&amp;gt;
+            &amp;lt;/row&amp;gt;
+          &amp;lt;/tabular&amp;gt;
+        
+        &lt;/pre&gt;
+      &lt;/solution&gt;
+    &lt;/task&gt;
+    &lt;task&gt;
+      &lt;statement&gt;
+        &lt;p&gt;
+          Create the same table using a &lt;latex /&gt; array environment. 
+          &lt;me&gt;
+            \begin{array}{c|c|c} 
+              1 \amp 2 \amp 3 \\ \hline
+              4 \amp 5 \amp 6
+            \end{array}
+          &lt;/me&gt;
+        &lt;/p&gt;
+      &lt;/statement&gt;
+      &lt;solution&gt;
+        &lt;pre&gt;
+        
+          &amp;lt;me&amp;gt;
+            \begin{array}{c|c|c} 
+              1 \amp 2 \amp 3 \\ \hline
+              4 \amp 5 \amp 6
+            \end{array}
+          &amp;lt;/me&amp;gt;
+        
+        &lt;/pre&gt;
+      &lt;/solution&gt;
+    &lt;/task&gt;
+  &lt;/exploration&gt;
+
+  
+
+  &lt;/section&gt;
+
+  &lt;section xml:id="sec-blocks-practice"&gt;
+    &lt;title&gt;Blocks&lt;/title&gt;
+    &lt;exploration&gt;
+    &lt;task&gt;
+      &lt;statement&gt;
+        &lt;p&gt;
+          Write a numbered definition.  Don't forget to highlight the word that is being defined.
+        &lt;/p&gt;
+      &lt;/statement&gt;
+    &lt;/task&gt;
+    &lt;task&gt;
+      &lt;statement&gt;
+        &lt;p&gt;
+          Oh no!  You just realized that your definition is actually more of an axiom.  What are you going to do!?!?
+        &lt;/p&gt;
+      &lt;/statement&gt;
+    &lt;/task&gt;
+    &lt;/exploration&gt;
+
+
+
+    &lt;exploration&gt;
+      &lt;task&gt;
+        &lt;statement&gt;
+          &lt;p&gt;
+            Write a lemma.  Since it is probably obvious, you can leave off the proof.
+          &lt;/p&gt;
+        &lt;/statement&gt;
+      &lt;/task&gt;
+      &lt;task&gt;
+        &lt;statement&gt;
+          &lt;p&gt;
+            Write a theorem, and include a proof.  The proof should use (and reference) the lemma (which means you need to go back and identify the lemma some how).
+          &lt;/p&gt;
+        &lt;/statement&gt;
+      &lt;/task&gt;
+      &lt;task&gt;
+        &lt;statement&gt;
+          &lt;p&gt;
+            What other types of mathematical statements might you want to include now?  Maybe you put a remark or a note or a corollary?  What would you want to do?  What can you do?
+          &lt;/p&gt;
+        &lt;/statement&gt;
+      &lt;/task&gt;
+    &lt;/exploration&gt;
+
+    &lt;exploration&gt;
+      &lt;task&gt;
+        &lt;statement&gt;
+          &lt;p&gt;
+            Write a numbered example.
+          &lt;/p&gt;
+        &lt;/statement&gt;
+      &lt;/task&gt;
+      &lt;task&gt;
+        &lt;statement&gt;
+          &lt;p&gt;
+            Sometimes an example is of a problem you would ask students to solve.  You might include a hint or solution for such examples.  Give an example of such a thing, with a hint and solution.
+          &lt;/p&gt;
+        &lt;/statement&gt;
+      &lt;/task&gt;
+    &lt;/exploration&gt;
+
+    &lt;exploration&gt;
+      &lt;task&gt;
+        &lt;statement&gt;
+          &lt;p&gt;
+            Write an &lt;term&gt;activity&lt;/term&gt; that you would want your students to try.  Give your activity a hint.
+          &lt;/p&gt;
+        &lt;/statement&gt;
+      &lt;/task&gt;
+      &lt;task&gt;
+        &lt;statement&gt;
+          &lt;p&gt;
+            Sometimes an activity has multiple parts.  You could give each part as an item on a numbered list, but that would not allow parts to have their own hint/answer/solution.
+          &lt;/p&gt;
+          &lt;p&gt;
+            Instead, you can make each part its own &lt;tag&gt;task&lt;/tag&gt;.  Try writing a multi-part activity, some parts having hints, others having a solution.
+          &lt;/p&gt;
+        &lt;/statement&gt;
+      &lt;/task&gt;
+    &lt;/exploration&gt;
+
+    &lt;p&gt;
+      Exercises can appear at the end of a section, in an &lt;tag&gt;exercises&lt;/tag&gt; division, or they can be &lt;q&gt;checkpoint&lt;/q&gt; exercises that show up in the middle of a section.
+    &lt;/p&gt;
+
+    &lt;exploration&gt;
+      &lt;statement&gt;
+        &lt;p&gt;
+          Write a checkpoint exercise.  Up to you whether it gets parts (i.e. tasks).
+        &lt;/p&gt;
+      &lt;/statement&gt;
+    &lt;/exploration&gt;
+
+    &lt;assemblage xml:id="assemblage-example-for-exercise"&gt;
+      &lt;title&gt;What we learned&lt;/title&gt;
+      &lt;p&gt;
+        You can do lots of things in &lt;pretext /&gt;.
+      &lt;/p&gt;
+    &lt;/assemblage&gt;
+
+    &lt;exploration&gt;
+      &lt;statement&gt;
+        &lt;p&gt;
+          Write a summary box like the one above.  You might say that such a box &lt;q&gt;assembles&lt;/q&gt; the concepts you have discussed...
+        &lt;/p&gt;
+      &lt;/statement&gt;
+    &lt;/exploration&gt;
+  &lt;/section&gt;
+
+  &lt;section xml:id="sec-bonus-practice"&gt;
+    &lt;title&gt;Challenges&lt;/title&gt;
+    &lt;p&gt;
+      Want to push yourself a bit?  Try some of these bonus activities
+    &lt;/p&gt;
+
+    &lt;investigation&gt;
+      &lt;statement&gt;
+        &lt;p&gt;
+          Replicated the following:
+        &lt;/p&gt;
+        &lt;sidebyside valign="middle"&gt;
+          &lt;p&gt;
+            &lt;me&gt;
+              f(x) = x^2
+            &lt;/me&gt;
+          &lt;/p&gt;
+
+          &lt;table&gt;
+            &lt;title&gt;Table of Values&lt;/title&gt;
+            &lt;tabular&gt;
+              &lt;row bottom="medium"&gt;
+                &lt;cell&gt;&lt;m&gt;x&lt;/m&gt;&lt;/cell&gt;
+                &lt;cell&gt;&lt;m&gt;f(x)&lt;/m&gt;&lt;/cell&gt;
+              &lt;/row&gt;
+              &lt;row&gt;
+                &lt;cell&gt;1&lt;/cell&gt;
+                &lt;cell&gt;1&lt;/cell&gt;
+              &lt;/row&gt;
+              &lt;row&gt;
+                &lt;cell&gt;2&lt;/cell&gt;
+                &lt;cell&gt;4&lt;/cell&gt;
+              &lt;/row&gt;
+              &lt;row&gt;
+                &lt;cell&gt;3&lt;/cell&gt;
+                &lt;cell&gt;9&lt;/cell&gt;
+              &lt;/row&gt;
+            &lt;/tabular&gt;
+          &lt;/table&gt;
+        &lt;/sidebyside&gt;
+      &lt;/statement&gt;
+    &lt;/investigation&gt;
+
+
+    &lt;investigation&gt;
+    &lt;statement&gt;
+      &lt;p&gt;
+        Create the folowing images using TikZ
+      &lt;/p&gt;
+      &lt;sidebyside widths="33% 33%" margins="11%" valign="middle"&gt;
+        &lt;image width="25%" xml:id="tikz_quick_eg"&gt;
+          &lt;latex-image&gt;
+            \begin{tikzpicture}
+              \draw[fill=red,opacity=0.2] (0,0) circle (1.15);
+              \draw[fill=blue,opacity=0.2] (1,0) circle (1.15);
+              \end{tikzpicture}
+          &lt;/latex-image&gt;
+        &lt;/image&gt;
+
+        &lt;image width="33%" xml:id="image_tikz_eg"&gt;
+          &lt;latex-image&gt;
+            \begin{tikzpicture} 
+              \\ Shade the enclosed area first
+              \draw[color=white,fill=green,opacity=0.33] 
+                (1,0) 
+                -- (1,{cos(1 r)+2}) 
+                -- plot[domain= 1:3] ({\x},{cos(\x r)+2}) 
+                -- (3,{cos(3 r)+2})
+                -- (3,0)
+                -- (1,0);
+
+              \\ Draw the axes
+              \draw[latex-latex] (-1,0) -- (5,0);
+              \draw[latex-latex] (0,-1) -- (0,4);
+
+              \\ Plot the function
+              \draw [thick,domain=-1:4.5] plot ({\x},{cos(\x r)+2});
+              \node [thick,above right] at (4.5,{cos(4.5 r) + 2}){$f$};
+
+              \\ Draw the boundaries
+              \draw[red] (1,3) -- (1,-0.25) node [below] {$a$};
+              \draw[red] (3,3) -- (3,-0.25) node [below] {$b$};
+
+              \\ Label the area
+              \draw[&amp;lt;- , very thick] (2,0.5) -- (2.2,-1) node[below] {area between $f$ and $x$-axis over $[a,b]$};
+            \end{tikzpicture}
+          &lt;/latex-image&gt;
+        &lt;/image&gt;
+      &lt;/sidebyside&gt;
+    &lt;/statement&gt;
+    &lt;hint&gt;
+      &lt;p&gt;
+        Use two &lt;c&gt;image&lt;/c&gt; environments, each containing a &lt;c&gt;latex-image&lt;/c&gt; environment.
+        To display the images side by side, use the &lt;c&gt;sidebyside&lt;/c&gt; environment. 
+        To get the sizes and spacing even and uniform, you will need to set &lt;c&gt;@widths&lt;/c&gt; and &lt;c&gt;@margins&lt;/c&gt; in the &lt;c&gt;sidebyside&lt;/c&gt; environment. 
+      &lt;/p&gt;
+      &lt;p&gt;
+        Remember that the &amp;lt; and &amp;gt; symbols are restricted.  
+        For lines, it is eaisest to use &lt;c&gt;latex&lt;/c&gt; or &lt;c&gt;stealth&lt;/c&gt; as your arrow style. 
+        If you must use  &amp;lt; and &amp;gt; in your TikZ code, you must replace the symbols with &lt;c&gt;&amp;amp;lt;&lt;/c&gt; and &lt;c&gt;&amp;amp;gt;&lt;/c&gt; respectively.
+      &lt;/p&gt;
+    &lt;/hint&gt;
+    &lt;solution&gt;
+        &lt;pre&gt;
+        
+          &amp;lt;sidebyside  widths="33% 33%" margins="11%" valign="middle"&amp;gt;
+            &amp;lt;image width="25%" xml:id="tikz_quick_eg"&amp;gt;
+              &amp;lt;latex-image&amp;gt;
+                \begin{tikzpicture}
+                  \draw[fill=red,opacity=0.2] (0,0) circle (1.15);
+                  \draw[fill=blue,opacity=0.2] (1,0) circle (1.15);
+                  \end{tikzpicture}
+              &amp;lt;/latex-image&amp;gt;
+            &amp;lt;/image&amp;gt;
+
+            &amp;lt;image width="33%" xml:id="image_tikz_eg"&amp;gt;
+              &amp;lt;latex-image&amp;gt;
+                \begin{tikzpicture} 
+                  \\ Shade the enclosed area first
+                  \draw[color=white,fill=green,opacity=0.33] 
+                    (1,0) 
+                    -- (1,{cos(1 r)+2}) 
+                    -- plot[domain= 1:3] ({\x},{cos(\x r)+2}) 
+                    -- (3,{cos(3 r)+2})
+                    -- (3,0)
+                    -- (1,0);
+
+                  \\ Draw the axes
+                  \draw[latex-latex] (-1,0) -- (5,0);
+                  \draw[latex-latex] (0,-1) -- (0,4);
+
+                  \\ Plot the function
+                  \draw [thick,domain=-1:4.5] plot ({\x},{cos(\x r)+2});
+                  \node [thick,above right] at (4.5,{cos(4.5 r) + 2}){$f$};
+
+                  \\ Draw the boundaries
+                  \draw[red] (1,3) -- (1,-0.25) node [below] {$a$};
+                  \draw[red] (3,3) -- (3,-0.25) node [below] {$b$};
+
+                  \\ Label the area
+                  \draw[&amp;amp;lt;- , very thick] (2,0.5) -- (2.2,-1) node[below] {area between $f$ and $x$-axis over $[a,b]$};
+                \end{tikzpicture}
+              &amp;lt;/latex-image&amp;gt;
+            &amp;lt;/image&amp;gt;
+          &amp;lt;/sidebyside&amp;gt;
+        
+        &lt;/pre&gt;
+    &lt;/solution&gt;
+  &lt;/investigation&gt;
+  &lt;/section&gt;
+
+    &lt;section xml:id="sec-adapting-example"&gt;
+        &lt;title&gt;Adapting existing content&lt;/title&gt;
+        
+        &lt;activity&gt;
+            &lt;statement&gt;
+                &lt;p&gt;
+Nest the following PreTeXt elements in order to produce the &lt;q&gt;Graphing a Derivative&lt;/q&gt; subsection of
+&lt;url href="https://openstax.org/books/calculus-volume-1/pages/3-2-the-derivative-as-a-function#fs-id1169737770972"&gt;
+    OpenStax Calculus Volume 1 Section 3.2
+&lt;/url&gt;.
+                &lt;/p&gt;
+                &lt;program language="xml"&gt;
+                    &lt;input&gt; 
+&amp;lt;caption&amp;gt;The derivative &amp;lt;m&amp;gt;f'(x)&amp;lt;/m&amp;gt; is positive everywhere because the function &amp;lt;m&amp;gt;f(x)&amp;lt;/m&amp;gt; is increasing.&amp;lt;/caption&amp;gt;
+&amp;lt;caption&amp;gt;The derivative &amp;lt;m&amp;gt;f'(x)\lt 0&amp;lt;/m&amp;gt; where the function &amp;lt;m&amp;gt;f(x)&amp;lt;/m&amp;gt; is decreasing and &amp;lt;m&amp;gt;f'(x)\gt 0&amp;lt;/m&amp;gt; where &amp;lt;m&amp;gt;f(x)&amp;lt;/m&amp;gt; is increasing...&amp;lt;/caption&amp;gt;
+&amp;lt;description&amp;gt;The function f(x) = the square root of x is graphed as is its derivative f'(x) = 1/(2 times the square root of x).&amp;lt;/description&amp;gt;
+&amp;lt;description&amp;gt;Two functions are graphed here: f(x) and f'(x). The function f(x) is the same as the above graph, that is, roughly sinusoidal, starting at (-4, 3), decreasing to a local minimum at (-2, 2), then increasing to a local maximum at (3, 6), and getting cut off at (7, 2). The function f'(x) is an downward-facing parabola with vertex near (0.5, 1.75), y-intercept (0, 1.5), and x-intercepts (-1.9, 0) and (3, 0).&amp;lt;/description&amp;gt;
+&amp;lt;description&amp;gt;The function f(x) = x squared - 2x is graphed as is its derivative f'(x) = 2x - 2.&amp;lt;/description&amp;gt;
+&amp;lt;description&amp;gt;The function f(x) is roughly sinusoidal, starting at (-4, 3), decreasing to a local minimum at (-2, 2), then increasing to a local maximum at (3, 6), and getting cut off at (7, 2).&amp;lt;/description&amp;gt;
+&amp;lt;example&amp;gt;&amp;lt;/example&amp;gt;
+&amp;lt;exercise&amp;gt;&amp;lt;/exercise&amp;gt;
+&amp;lt;figure&amp;gt;&amp;lt;/figure&amp;gt;
+&amp;lt;figure&amp;gt;&amp;lt;/figure&amp;gt;
+&amp;lt;image source="solution-image.jpg"&amp;gt;&amp;lt;/image&amp;gt;
+&amp;lt;image source="fx-sqrt-x.jpg"&amp;gt;&amp;lt;/image&amp;gt;
+&amp;lt;image source="exercise-image.jpg"&amp;gt;&amp;lt;/image&amp;gt;
+&amp;lt;image source="fx-x2-2x.jpg"&amp;gt;&amp;lt;/image&amp;gt;
+&amp;lt;p&amp;gt;We have already discussed how to graph a function...&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;In Example 3.12 we found that for &amp;lt;m&amp;gt;f(x)=x^2-2x,f'(x)=2x-2&amp;lt;/m&amp;gt;...&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;Sketch the graph of &amp;lt;m&amp;gt;f(x)=x^2-4&amp;lt;/m&amp;gt;...&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;In Example 3.11 we found that for &amp;lt;m&amp;gt;f(x)=\sqrt{x},f'(x)=1/2\sqrt{x}&amp;lt;/m&amp;gt;...&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;The solution is shown in the following graph. Observe that...&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;Use the following graph of &amp;lt;m&amp;gt;f(x)&amp;lt;/m&amp;gt; to sketch a graph of &amp;lt;m&amp;gt;f'(x)&amp;lt;/m&amp;gt;.&amp;lt;/p&amp;gt;
+&amp;lt;solution&amp;gt;&amp;lt;/solution&amp;gt;
+&amp;lt;statement&amp;gt;&amp;lt;/statement&amp;gt;
+&amp;lt;statement&amp;gt;&amp;lt;/statement&amp;gt;
+&amp;lt;subsection&amp;gt;&amp;lt;/subsection&amp;gt;
+&amp;lt;title&amp;gt;Graphing a Derivative&amp;lt;/title&amp;gt;
+&amp;lt;title&amp;gt;Sketching a Derivative Using a Function&amp;lt;/title&amp;gt;
+                    &lt;/input&gt;
+                &lt;/program&gt;
+            &lt;/statement&gt;
+        &lt;/activity&gt;
+
+
+        &lt;activity&gt;
+            &lt;introduction&gt;
+                &lt;p&gt;
+Consider the following concerning the first two pages (leading up until the &lt;q&gt;Units&lt;/q&gt; header)
+of &lt;url href="https://www.math.miami.edu/~ec/book/ch03.pdf"&gt;Elements of Abstract and Linear Algebra&lt;/url&gt;.
+                &lt;/p&gt;
+            &lt;/introduction&gt;
+            &lt;task&gt;
+                &lt;statement&gt;
+                    &lt;p&gt;
+Consider how this content might be scaffolded in terms of paragraphs, theorems, statements, proofs, and
+so on (not necessarily in PreTeXt terms).
+                    &lt;/p&gt;
+                &lt;/statement&gt;
+            &lt;/task&gt;
+            &lt;task&gt;
+                &lt;statement&gt;
+                    &lt;p&gt;
+Nest the following PreTeXt elements in order to reproduce this portion of &lt;title&gt;Elements&lt;/title&gt;.
+                    &lt;/p&gt;
+                    &lt;program language="xml"&gt;
+                        &lt;input&gt; 
+&amp;lt;definition&amp;gt;&amp;lt;/definition&amp;gt;
+&amp;lt;example&amp;gt;&amp;lt;/example&amp;gt;
+&amp;lt;introduction&amp;gt;&amp;lt;/introduction&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;If &amp;lt;m&amp;gt;a,b,c\in R&amp;lt;/m&amp;gt;... (associative)&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;&amp;lt;m&amp;gt;(-a)\cdot b=a\cdot(-b)=-(a\cdot b)&amp;lt;/m&amp;gt;.&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;If &amp;lt;m&amp;gt;a,b,c\in R&amp;lt;/m&amp;gt;... (distribuative)&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;&amp;lt;m&amp;gt;(na)\cdot(mb)=(nm)(a\cdot b)&amp;lt;/m&amp;gt;...&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;&amp;lt;m&amp;gt;a\cdot \underline{0}=\underline{0}\cdot=\underline{0}&amp;lt;/m&amp;gt;...&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;&amp;lt;m&amp;gt;R&amp;lt;/m&amp;gt; has a multiplicative identity...&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;Let &amp;lt;m&amp;gt;\underline{n}=n\underline{1}&amp;lt;/m&amp;gt;. For example...&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;If &amp;lt;m&amp;gt;a,b\in R&amp;lt;/m&amp;gt;... (commutative)&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;p&amp;gt;Suppose &amp;lt;m&amp;gt;R&amp;lt;/m&amp;gt; is an additive abelian group...&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;The next two theorems show that ring mulitplication...&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;Suppose &amp;lt;m&amp;gt;R&amp;lt;/m&amp;gt; is a ring and &amp;lt;m&amp;gt;a,b\in R&amp;lt;/m&amp;gt;.&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;Suppose &amp;lt;m&amp;gt;a,b\in R&amp;lt;/m&amp;gt; and &amp;lt;m&amp;gt;n,m\in \mathbf Z&amp;lt;/m&amp;gt;.&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;Rings are additive abelian groups with a second operation...&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;The basic commutative rings in mathematics are the integers &amp;lt;m&amp;gt;\mathbf Z&amp;lt;/m&amp;gt;...&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;Recall that, since &amp;lt;m&amp;gt;R&amp;lt;/m&amp;gt; is an additive abelien group...&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;If 1,2,3 are satisfied...&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;ol&amp;gt;&amp;lt;/ol&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;ol&amp;gt;&amp;lt;/ol&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;ol&amp;gt;&amp;lt;/ol&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;section&amp;gt;&amp;lt;/section&amp;gt;
+&amp;lt;statement&amp;gt;&amp;lt;/statement&amp;gt;
+&amp;lt;statement&amp;gt;&amp;lt;/statement&amp;gt;
+&amp;lt;statement&amp;gt;&amp;lt;/statement&amp;gt;
+&amp;lt;theorem&amp;gt;&amp;lt;/theorem&amp;gt;
+&amp;lt;title&amp;gt;Rings&amp;lt;/title&amp;gt;
+&amp;lt;theorem&amp;gt;&amp;lt;/theorem&amp;gt;
+&amp;lt;statement&amp;gt;&amp;lt;/statement&amp;gt;
+                        &lt;/input&gt;
+                    &lt;/program&gt;
+                &lt;/statement&gt;
+            &lt;/task&gt;
+        &lt;/activity&gt;
+
+    &lt;/section&gt;
+
+
+&lt;/chapter&gt;
+</pre></body></html>

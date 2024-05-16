@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html><body><pre>&lt;section xml:id="sec-showing-and-hiding-things"&gt;
+    &lt;title&gt;Showing and Hiding things&lt;/title&gt;
+    
+    &lt;p&gt;
+        We have seen that some &lt;term&gt;blocks&lt;/term&gt;, like proofs, solutions, examples, are sometimes &lt;em&gt;hidden&lt;/em&gt; behind a &lt;term&gt;knowl&lt;/term&gt;: when you click on the title, the content expands to reveal itself.  Most of the blocks can be &lt;q&gt;knowled&lt;/q&gt; or not.
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        To edit these settings, look for the element &lt;tag&gt;html&lt;/tag&gt;, and inside that &lt;tage&gt;knowl&lt;/tage&gt;.  This element has a number of &lt;term&gt;attributes&lt;/term&gt; (the PreTeXt guide marks attributes with the &lt;c&gt;@&lt;/c&gt; symbol, by the way).  You can specify whether elements should be knowled or not by changing the value of the attributes between yes and no. 
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        Whether exercises are knowled depends on the type of exercises.  &lt;pretext /&gt; distinguishes five types of exercise-like elements, since they have hints/answers/solutions that you might want to hide: 
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;p&gt;
+                    inline, which show up as &lt;q&gt;checkpoints&lt;/q&gt;; these are exercises mixed with other content in a divisions.
+                &lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;
+                    divisional; these are exercises that belong to an &lt;tag&gt;exercises&lt;/tag&gt; division.
+                &lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;
+                    project; these are the entire project-like element like &lt;tag&gt;activity&lt;/tag&gt;, &lt;tag&gt;investigation&lt;/tag&gt; etc.
+                &lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;
+                    worksheet; essentially a project but its a division itself, and can contain spacing for students to work in when printed.
+                &lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;
+                    readingquestions; these are questions in a &lt;tag&gt;reading-questions&lt;/tag&gt; division.  These were exercises designed to get a text box that students can type short answers to questions at the end of a section.
+                &lt;/p&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        You can control whether the entire exercise-like element is knowled, but their hints/answers/solutions are always knowled (no spoilers!).  The only solution you can can choose to not knowl is that of an example, and that is controlled by these knowl switches.
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        You can, however, control which parts of exercises show up at all.  This is set in a different section of the publication file: &lt;c&gt;publication/common/exercise-inline&lt;/c&gt; (that is, in the &lt;tag&gt;common&lt;/tag&gt; block in the &lt;tag&gt;exercise-inline&lt;/tag&gt; element).  You can replace &lt;c&gt;exercise-inline&lt;/c&gt; by any of the five exercise types.  Then as attributes, specify yes or no for the &lt;attr&gt;statement&lt;/attr&gt;, &lt;attr&gt;hint&lt;/attr&gt;, &lt;attr&gt;answer&lt;/attr&gt;, &lt;attr&gt;solution&lt;/attr&gt;.  
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        This controls what shows up in the output, in all formats, at the position that the exercise was authored.  There are also ways to redisplay any parts of these exercises later, to give a list of all solutions in the back of the book, say.  See &lt;url href="https://pretextbook.org/doc/guide/html/topic-exercises-solutions.html#topic-solutions-division"&gt;Exercises and Solutions&lt;/url&gt; from the guide.
+    &lt;/p&gt;
+&lt;/section&gt;
+</pre></body></html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html><body><pre>&lt;figure xml:id="figure-sage-implicit-surface"&gt;
+  &lt;caption&gt;An implicitly defined 3D surface generated with SageMath code&lt;/caption&gt;
+  &lt;image xml:id="sageplot-implicit-surface" width="80%" margins="15% 5%"&gt;
+      &lt;sageplot variant="3d" aspect="1.0"&gt;
+      var('x y z')
+      T = RDF(golden_ratio)
+      p = 2 - (cos(x + T*y) + cos(x - T*y) + cos(y + T*z) + cos(y - T*z) + cos(z - T*x) + cos(z + T*x))
+      r = 4.77
+      implicit_plot3d(p, (x, -r, r), (y, -r, r), (z, -r, r), plot_points=50, frame=False)
+      &lt;/sageplot&gt;
+  &lt;/image&gt;
+&lt;/figure&gt;
+</pre></body></html>

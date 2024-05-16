@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html><body><pre>    &lt;chapter xml:id="ch-project"&gt;
+    &lt;title&gt;Managing Your Project&lt;/title&gt;
+    &lt;section xml:id="sec-file-and-directory-structure"&gt;
+        &lt;title&gt;File and directory structure&lt;/title&gt;
+        &lt;p&gt;
+            Here we describe the file and directory structure of a project.  PreTeXt allows a fair amount of flexibility in how you structure the project, but we believe the following are best practices.
+            &lt;dl&gt;
+                &lt;li&gt;
+                    &lt;title&gt;&lt;c&gt;source&lt;/c&gt; folder&lt;/title&gt;
+                    &lt;p&gt;
+                        Contains all your &lt;c&gt;.ptx&lt;/c&gt; files that hold the content of your document.  A new book starts with just a single file, but later we will see how to modularize the source to make organizing it easier.
+                    &lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;title&gt;&lt;c&gt;publication&lt;/c&gt; folder&lt;/title&gt;
+                    &lt;p&gt;
+                        Contains your &lt;c&gt;publication.ptx&lt;/c&gt; file or files, which define the publication-specific information about your document, as we saw in &lt;xref ref="ch-publication" /&gt;
+                    &lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;title&gt;&lt;c&gt;assets&lt;/c&gt; folder&lt;/title&gt;
+                    &lt;p&gt;
+                        Put any images or other static files that you will include in your document here. This does not include images that you describe inside your source (like &lt;tag&gt;latex-image&lt;/tag&gt;).  You can have subfolders as you like, and if you refer to these files in your source, you do &lt;alert&gt;not&lt;/alert&gt; use &lt;q&gt;assets&lt;/q&gt; as part of the file name (&lt;pretext /&gt; knows where to look, since this is specified in the &lt;c&gt;publication.ptx&lt;/c&gt; file.)
+                    &lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;title&gt;&lt;c&gt;generated-assets&lt;/c&gt; folder&lt;/title&gt;
+                    &lt;p&gt;
+                        This is a folder that &lt;pretext /&gt; automatically creates and fills with assets that it generates from your source.  You shouldn't edit anything in this folder.  It is not tracked by git by default.
+                    &lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;title&gt;&lt;c&gt;output&lt;/c&gt; folder&lt;/title&gt;
+                    &lt;p&gt;
+                        Another folder created by &lt;pretext /&gt;.  It will contain the results of &lt;c&gt;pretext build&lt;/c&gt;.  In general, you should not touch anything in this folder. Not tracked by git by default.
+                    &lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;title&gt;&lt;c&gt;project.ptx&lt;/c&gt; file&lt;/title&gt;
+                    &lt;p&gt;
+                        This is the &lt;term&gt;project manifest&lt;/term&gt; file, which you use to manage the different builds of your project.  We will describe how to use this in more detail below.
+                    &lt;/p&gt;
+                &lt;/li&gt;
+            &lt;/dl&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            There are a few other files that you might see in a project, such as &lt;c&gt;requirements.txt&lt;/c&gt; and &lt;c&gt;.gitignore&lt;/c&gt;.  Don't worry about these for now.
+        &lt;/p&gt;
+        &lt;p&gt;
+            When your project grows, you will likely want to separate your &lt;c&gt;main.ptx&lt;/c&gt; source file (inside the &lt;c&gt;source&lt;/c&gt; folder) into multiple &lt;c&gt;.ptx&lt;/c&gt; files.  For example, you might want a single file per chapter, and even a separate file for each section.  You can do this by using the &lt;tag&gt;xi:include&lt;/tag&gt; tag.  For example, if you have a file &lt;c&gt;source/chapter1.ptx&lt;/c&gt; that contains the first chapter of your book, you can include it in your &lt;c&gt;main.ptx&lt;/c&gt; file like this: 
+            &lt;cd&gt;
+                &lt;cline&gt;&amp;lt;xi:include href="./chapter1.ptx" /&amp;gt;&lt;/cline&gt;
+            &lt;/cd&gt;
+            In the top level tag of the file in which you use &lt;tag&gt;xi:include&lt;/tag&gt; (in this case, &lt;c&gt;main.ptx&lt;/c&gt;), you must add the following attribute: 
+            &lt;cd&gt;
+                &lt;cline&gt;xmlns:xi="http://www.w3.org/2001/XInclude"&lt;/cline&gt;
+            &lt;/cd&gt;
+        &lt;/p&gt;    
+        &lt;p&gt;
+            Then in the &lt;c&gt;chapter1.ptx&lt;/c&gt; file, you would start with the standard &lt;tag&gt;?xml version="1.0" encoding="UTF-8"?&lt;/tag&gt; followed by the top-level tag &lt;tag&gt;chapter&lt;/tag&gt;.  There can only be one top level tag in this file.  A second chapter would need to be its own file and &lt;tag&gt;xi:include&lt;/tag&gt; it separately.
+        &lt;/p&gt;
+        &lt;p&gt;
+            More information can be found in the &lt;url href="https://pretextbook.org/doc/guide/html/processing-modular.html"&gt;Modular Source Files&lt;/url&gt; section of the guide.
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section xml:id="sec-project-ptx"&gt;
+        &lt;title&gt;Project.ptx&lt;/title&gt;
+        &lt;p&gt;
+            You will likely want to build your source file into multiple output formats.  How do you tell &lt;pretext /&gt; what outputs you want?  You keep track of this, and some other information, in your &lt;c&gt;project.ptx&lt;/c&gt; file.
+        &lt;/p&gt;
+        &lt;p&gt;
+            The &lt;c&gt;project.ptx&lt;/c&gt; file is a &lt;term&gt;project manifest&lt;/term&gt; file.  It is used to manage the different builds of your project.  It is a &lt;c&gt;.ptx&lt;/c&gt; file, but it is not part of the content of your document.  It is used to tell &lt;pretext /&gt; how to build your document.
+        &lt;/p&gt;
+        &lt;p&gt;
+            For now, take a look at the &lt;c&gt;project.ptx&lt;/c&gt; file in this project.  You will see that there are multiple &lt;term&gt;targets&lt;/term&gt; each with a &lt;term&gt;name&lt;/term&gt;, and a specified &lt;tag&gt;format&lt;/tag&gt;, &lt;tag&gt;source&lt;/tag&gt;, &lt;tag&gt;publication&lt;/tag&gt; (file), and &lt;tag&gt;output-dir&lt;/tag&gt; (directory).  The &lt;tag&gt;source&lt;/tag&gt; and &lt;tag&gt;publication&lt;/tag&gt; are probably the same for all targets, but they don't have to be.
+        &lt;/p&gt;
+        &lt;p&gt;
+            For a complete description of this file and its use, see &lt;url href="https://pretextbook.org/doc/guide/html/processing-CLI.html#cli-project-manifest" /&gt;.
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section xml:id="sec-versions"&gt;
+        &lt;title&gt;Versions&lt;/title&gt;
+    &lt;/section&gt;
+    &lt;section xml:id="sec-building-subsets"&gt;
+        &lt;title&gt;Building subsets&lt;/title&gt;
+    &lt;/section&gt;
+    &lt;section xml:id="sec-codespaces-github-pages"&gt;
+        &lt;title&gt;Codespaces, GitHub, and GitHub Pages&lt;/title&gt;
+    &lt;/section&gt;
+&lt;/chapter&gt;
+</pre></body></html>

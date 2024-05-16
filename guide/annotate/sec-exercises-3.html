@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html><body><pre>&lt;exercise&gt;
+    &lt;title&gt;Using WebWork&lt;/title&gt;
+    &lt;webwork&gt;
+        &lt;pg-code&gt;
+            Context("LimitedNumeric");
+            $a = Compute(random(1, 9, 1));
+            $b = Compute(random(1, 9, 1));
+            $c = $a + $b;
+        &lt;/pg-code&gt;
+
+        &lt;statement&gt;
+            &lt;p&gt;Compute &lt;m&gt;&lt;var name="$a" /&gt; + &lt;var name="$b" /&gt;&lt;/m&gt;.&lt;/p&gt;
+            &lt;instruction&gt;Type your answer without using the &lt;c&gt;+&lt;/c&gt; sign.&lt;/instruction&gt;
+            &lt;p&gt;The sum is &lt;var name="$c" width="2" /&gt;.&lt;/p&gt;
+        &lt;/statement&gt;
+
+        &lt;solution&gt;
+            &lt;p&gt;&lt;m&gt;&lt;var name="$a" /&gt; + &lt;var name="$b" /&gt; = &lt;var name="$c" /&gt;&lt;/m&gt;.&lt;/p&gt;
+        &lt;/solution&gt;
+    &lt;/webwork&gt;
+&lt;/exercise&gt;
+</pre></body></html>

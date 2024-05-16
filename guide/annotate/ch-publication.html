@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html><body><pre>    &lt;chapter xml:id="ch-publication"&gt;
+    &lt;title&gt;Publishing &lt;/title&gt;
+    
+    &lt;introduction&gt;
+        &lt;p&gt;
+            By &lt;term&gt;publishing&lt;/term&gt;, we mean here the process of finalizing the presentation and look of the output you get from PreTeXt.  We stress again the philosophical distinction between &lt;term&gt;author&lt;/term&gt; and &lt;term&gt;publisher&lt;/term&gt; in &lt;pretext /&gt;, since there is great value in focusing on just one of these two types of tasks at a time.
+        &lt;/p&gt;
+
+        &lt;p&gt;
+            Another aspect of the publishing process is that of creating the physical book and making it available in bookstores, or making the the web version available on your own website.  The latter can be done automatically through GitHub pages using the &lt;c&gt;pretext deploy&lt;/c&gt; function, but perhaps you also want to have a separate landing page that links to a version of the book you are celling on Amazon.com.  However, these steps are beyond the scope of this guide (as for suggestions on the PreTeXt-support group if you would like some assistance getting started with these steps). 
+        &lt;/p&gt;
+
+        &lt;p&gt;
+            For this chapter we will assume you are trying to produce a single &lt;term&gt;version&lt;/term&gt; of your book and want to control the presentation and look of that version.  You can still produce this version in multiple &lt;term&gt;formats&lt;/term&gt; (web, pdf, epub), and which you want to produce might change what you do slightly.
+        &lt;/p&gt;
+    &lt;/introduction&gt;
+
+    &lt;section xml:id="sec-publication-file"&gt;
+        &lt;title&gt;The publication file&lt;/title&gt;
+        
+        &lt;p&gt;
+            &lt;pretext /&gt; controls publisher options in a &lt;term&gt;publication file&lt;/term&gt;.  The default location of this file is in the folder &lt;c&gt;publication&lt;/c&gt; and is itself called &lt;c&gt;publication.ptx&lt;/c&gt;.  Open this file and take a look.
+        &lt;/p&gt;
+
+        &lt;p&gt;
+            What you will see is more &lt;init&gt;XML&lt;/init&gt;, but a different set of tags than what you would write in your &lt;pretext /&gt; source.  The version of the publication file that came with your codespace was (at the one time) the almost complete list of options with default values provided.  This should make it easy to modify values and experiment with different settings.
+        &lt;/p&gt;
+
+        &lt;p&gt;
+            As new settings are introduced, you can find documentation ins the &lt;url href="https://pretextbook.org/doc/guide/html/publication-file-reference.html"&gt;Publication File Reference&lt;/url&gt; part of the guide.
+        &lt;/p&gt;
+
+        &lt;remark&gt;
+            &lt;p&gt;
+                Eventually you may want to have different versions of your document, and you can do this with different publication files.  In &lt;xref ref="ch-project" /&gt; we will consider how to manage multiple publication files easily.
+            &lt;/p&gt;
+        &lt;/remark&gt;
+
+        &lt;p&gt;
+            Next we will dive deeper into the different sorts of things that can be configured with this file.
+        &lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section xml:id="sec-showing-and-hiding-things"&gt;
+        &lt;title&gt;Showing and Hiding things&lt;/title&gt;
+        
+        &lt;p&gt;
+            We have seen that some &lt;term&gt;blocks&lt;/term&gt;, like proofs, solutions, examples, are sometimes &lt;em&gt;hidden&lt;/em&gt; behind a &lt;term&gt;knowl&lt;/term&gt;: when you click on the title, the content expands to reveal itself.  Most of the blocks can be &lt;q&gt;knowled&lt;/q&gt; or not.
+        &lt;/p&gt;
+
+        &lt;p&gt;
+            To edit these settings, look for the element &lt;tag&gt;html&lt;/tag&gt;, and inside that &lt;tage&gt;knowl&lt;/tage&gt;.  This element has a number of &lt;term&gt;attributes&lt;/term&gt; (the PreTeXt guide marks attributes with the &lt;c&gt;@&lt;/c&gt; symbol, by the way).  You can specify whether elements should be knowled or not by changing the value of the attributes between yes and no. 
+        &lt;/p&gt;
+
+        &lt;p&gt;
+            Whether exercises are knowled depends on the type of exercises.  &lt;pretext /&gt; distinguishes five types of exercise-like elements, since they have hints/answers/solutions that you might want to hide: 
+            &lt;ul&gt;
+                &lt;li&gt;
+                    &lt;p&gt;
+                        inline, which show up as &lt;q&gt;checkpoints&lt;/q&gt;; these are exercises mixed with other content in a divisions.
+                    &lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;p&gt;
+                        divisional; these are exercises that belong to an &lt;tag&gt;exercises&lt;/tag&gt; division.
+                    &lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;p&gt;
+                        project; these are the entire project-like element like &lt;tag&gt;activity&lt;/tag&gt;, &lt;tag&gt;investigation&lt;/tag&gt; etc.
+                    &lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;p&gt;
+                        worksheet; essentially a project but its a division itself, and can contain spacing for students to work in when printed.
+                    &lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;p&gt;
+                        readingquestions; these are questions in a &lt;tag&gt;reading-questions&lt;/tag&gt; division.  These were exercises designed to get a text box that students can type short answers to questions at the end of a section.
+                    &lt;/p&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/p&gt;
+
+        &lt;p&gt;
+            You can control whether the entire exercise-like element is knowled, but their hints/answers/solutions are always knowled (no spoilers!).  The only solution you can can choose to not knowl is that of an example, and that is controlled by these knowl switches.
+        &lt;/p&gt;
+
+        &lt;p&gt;
+            You can, however, control which parts of exercises show up at all.  This is set in a different section of the publication file: &lt;c&gt;publication/common/exercise-inline&lt;/c&gt; (that is, in the &lt;tag&gt;common&lt;/tag&gt; block in the &lt;tag&gt;exercise-inline&lt;/tag&gt; element).  You can replace &lt;c&gt;exercise-inline&lt;/c&gt; by any of the five exercise types.  Then as attributes, specify yes or no for the &lt;attr&gt;statement&lt;/attr&gt;, &lt;attr&gt;hint&lt;/attr&gt;, &lt;attr&gt;answer&lt;/attr&gt;, &lt;attr&gt;solution&lt;/attr&gt;.  
+        &lt;/p&gt;
+
+        &lt;p&gt;
+            This controls what shows up in the output, in all formats, at the position that the exercise was authored.  There are also ways to redisplay any parts of these exercises later, to give a list of all solutions in the back of the book, say.  See &lt;url href="https://pretextbook.org/doc/guide/html/topic-exercises-solutions.html#topic-solutions-division"&gt;Exercises and Solutions&lt;/url&gt; from the guide.
+        &lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section xml:id="sec-numbering"&gt;
+        &lt;title&gt;Numbering&lt;/title&gt;
+        
+        &lt;p&gt;
+            There are a few settings that control how things are numbered.  Most of these live inside the &lt;tag&gt;numbering&lt;/tag&gt; element of the publication file.
+            &lt;ul&gt;
+                &lt;li&gt;
+                    &lt;p&gt;
+                        The &lt;tage&gt;division&lt;/tage&gt; element and its attributes says how &lt;q&gt;deep&lt;/q&gt; the numbering goes (i.e., do you put numbers on subsubsection?).  This is set as a natural number as the value of the &lt;attr&gt;level&lt;/attr&gt; attribute.
+                    &lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;p&gt;
+                        Also in this element you can specify whether parts are &lt;term&gt;structural&lt;/term&gt; or &lt;term&gt;decorative&lt;/term&gt;.  This essentially says whether chapter number should restart in each part.
+                    &lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;p&gt;
+                        You can also set the number of the first chapter here using the &lt;attr&gt;chapter-start&lt;/attr&gt; attribute.
+                    &lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;p&gt;
+                        There are four different types of elements that can be numbered independently: &lt;term&gt;blocks&lt;/term&gt;, &lt;term&gt;projects&lt;/term&gt;, &lt;term&gt;equations&lt;/term&gt;, and &lt;term&gt;footnotes&lt;/term&gt;.  You can control how specific the numbering are for each of these by giving the corresponding element a &lt;attr&gt;level&lt;/attr&gt; attribute.
+                    &lt;/p&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section xml:id="sec-formatting"&gt;
+        &lt;title&gt;Formatting&lt;/title&gt;
+        &lt;p&gt;
+            While there are some ways to control the look of the pdf, that is beyond the scope of this guide.  Web output can be controlled more easily, selecting from a small number of predefined styles.  
+        &lt;/p&gt;
+
+        &lt;p&gt;
+            This is a feature that is currently under active development, so we will not say much here, but instead refer you again to the &lt;url href="https://pretextbook.org/doc/guide/html/publication-file-reference.html"&gt;Publication File Reference&lt;/url&gt; part of the guide.
+        &lt;/p&gt;
+    &lt;/section&gt;
+&lt;/chapter&gt;
+</pre></body></html>

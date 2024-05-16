@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><body><pre>&lt;section xml:id="sec-previewing"&gt;
+  &lt;title&gt;Previewing&lt;/title&gt;
+  &lt;p&gt;
+    You can check the output of what you built using the &lt;term&gt;View&lt;/term&gt; command.  Again, you can access this in multiple ways. If you use the &lt;pretext /&gt; Commands menu ans select &lt;q&gt;view&lt;/q&gt;, you will get a choice for your viewer.  We currently suggest using &lt;q&gt;Live Preview&lt;/q&gt;, although on codespace this requires a few extra steps:
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;
+          When the side preview opens, it will ask you if you want to open in an external browser.  Click &lt;q&gt;Open in browser&lt;/q&gt;.  If you don't see the pop-up, you can clicke on &lt;q&gt;Port: 3000&lt;/q&gt; in the bottom status bar of VS Code and select &lt;q&gt;Open in browser&lt;/q&gt; from the pop-up menu.
+        &lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;
+          Now close the new tab that opens, and also close the side panel in VS Code that opened.
+        &lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;
+          Finally select &lt;q&gt;View&lt;/q&gt; again, and it should just work.  You can drag the VS Code tab to un-split the window to make it easier to view.
+        &lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    You can also experiment with the CLI view command, by selecting that from the pop-up menu, or by typing &lt;c&gt;pretext view web&lt;/c&gt; in the terminal.  This should pop up a new browser tab with the preview.  The only reason we caution against this currently is that the local server that gets started to preview the files will keep running as long as your codespace is active, and we don't understand how this affects resource use.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    When you make edits to your source files, you will need to build again, and then refresh the preview window to see the changes.
+  &lt;/p&gt;
+&lt;/section&gt;
+</pre></body></html>

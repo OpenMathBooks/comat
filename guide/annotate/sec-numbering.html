@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><body><pre>&lt;section xml:id="sec-numbering"&gt;
+    &lt;title&gt;Numbering&lt;/title&gt;
+    
+    &lt;p&gt;
+        There are a few settings that control how things are numbered.  Most of these live inside the &lt;tag&gt;numbering&lt;/tag&gt; element of the publication file.
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;p&gt;
+                    The &lt;tage&gt;division&lt;/tage&gt; element and its attributes says how &lt;q&gt;deep&lt;/q&gt; the numbering goes (i.e., do you put numbers on subsubsection?).  This is set as a natural number as the value of the &lt;attr&gt;level&lt;/attr&gt; attribute.
+                &lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;
+                    Also in this element you can specify whether parts are &lt;term&gt;structural&lt;/term&gt; or &lt;term&gt;decorative&lt;/term&gt;.  This essentially says whether chapter number should restart in each part.
+                &lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;
+                    You can also set the number of the first chapter here using the &lt;attr&gt;chapter-start&lt;/attr&gt; attribute.
+                &lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;
+                    There are four different types of elements that can be numbered independently: &lt;term&gt;blocks&lt;/term&gt;, &lt;term&gt;projects&lt;/term&gt;, &lt;term&gt;equations&lt;/term&gt;, and &lt;term&gt;footnotes&lt;/term&gt;.  You can control how specific the numbering are for each of these by giving the corresponding element a &lt;attr&gt;level&lt;/attr&gt; attribute.
+                &lt;/p&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/p&gt;
+&lt;/section&gt;
+</pre></body></html>

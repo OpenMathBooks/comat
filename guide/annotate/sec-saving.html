@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html><body><pre>&lt;section xml:id="sec-saving"&gt;
+  &lt;title&gt;Saving your work&lt;/title&gt;
+  &lt;p&gt;
+    Using codespaces will keep all your files &lt;q&gt;in the cloud&lt;/q&gt; on GitHub's server.  As long as you don't delete your codespace, your files will be saved there.  However, you will want to &lt;term&gt;push&lt;/term&gt; these files to your &lt;term&gt;git repository&lt;/term&gt; on GitHub to make this save perminent.  This has the benefit of allowing collaborators to access your files as well (your codespace is unique to your account).
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    There is a &lt;em&gt;lot&lt;/em&gt; to learn about git, but luckily using VS Code lets you do everything you need using menus (you don't need to use the command line, unless you want to).  Everything can be controlled using the &lt;term&gt;Source Control&lt;/term&gt; view: it should be third from the top on the very left of the window, an icon with splitting paths, and likely a badge showing how many files you have changed.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Here are the basic concepts you need to understand.
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;
+          The program &lt;term&gt;git&lt;/term&gt; keeps track of all the changes you make to files inside of your &lt;term&gt;repository&lt;/term&gt; (in this case, the folder containing your project). 
+        &lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;
+          Once you have edited your files and are happy with all of them, you tell git to track the set of changes as a &lt;term&gt;commit&lt;/term&gt;.  This creates a handy &lt;em&gt;breakpoint&lt;/em&gt; you could return to if you want to go back to an earlier version.
+         &lt;/p&gt; 
+          
+         &lt;p&gt;
+          There are two steps to creating a commit (which you can often do all at once in practice):
+          &lt;ol&gt;
+            &lt;li&gt;
+              &lt;p&gt;
+                You &lt;term&gt;stage&lt;/term&gt; the files you want to update in the commit.
+              &lt;/p&gt;
+              &lt;p&gt;
+                You &lt;term&gt;commit&lt;/term&gt; the stage files including a &lt;term&gt;commit message&lt;/term&gt;.
+              &lt;/p&gt;
+            &lt;/li&gt;
+          &lt;/ol&gt;
+          Doing this in two steps can be helpful if you want to commit only some of the files that have changed.
+        &lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;
+          Once you have one or more commits, you need to sync these changes with GitHub.  To &lt;q&gt;upload&lt;/q&gt; your changes, you &lt;term&gt;push&lt;/term&gt; the repository.  To download changes that you are someone else made, you &lt;term&gt;pull&lt;/term&gt; the repository.
+        &lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Now, how do we do these things in VS Code?  Start by looking at the Source Control view.  You will notice a list of files that were changed.  You can click on any of these to see what the changes are (you will see a side-by-side view of the original and updated version).
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    If you are comfortable staging and committing in one step, you can simply write yourself a short message in the textbox above the big green &lt;q&gt;Commit&lt;/q&gt; button, and click the button.  If you want to stage first, click the + next to each file under &lt;q&gt;changes&lt;/q&gt; to stage them.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    The green button should now turn into a &lt;q&gt;Sync&lt;/q&gt; button.  When you click that, it will do a quick pull and then a push, to sync changes with GitHub.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    The only small point about using git is that no all files will be tracked.  This is on purpose, since temporary files really should not be &lt;q&gt;remembered&lt;/q&gt; using this version control setting.  Which files or types of files are ignored by git is controled by the &lt;q&gt;.gitignore&lt;/q&gt; file in your repository.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    In particular, we do not track the output of builds.  Git is used to track progress on your source, which you build into output at any time.  If you want others to be able to see the output of your work without building it themselves, you need to deploy your work.
+  &lt;/p&gt;
+&lt;/section&gt;
+</pre></body></html>

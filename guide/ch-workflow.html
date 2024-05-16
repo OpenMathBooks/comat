@@ -254,9 +254,11 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-workflow"><h2 class="heading">
 <span class="type">Chapter</span><span class="space"> </span><span class="codenumber">3</span><span class="space"> </span><span class="title">Codespace Workflow</span>
 </h2>
+<div><a href="" class="xref" data-knowl="annotate/ch-workflow.html" data-reveal-label="Open" data-close-label="Close">View Source</a></div>
 <section class="introduction" id="ch-workflow-2"><div class="para" id="ch-workflow-2-1">Once you create content in PreTeXt, it is time to <dfn class="terminology">build</dfn> it, perhaps <dfn class="terminology">generate assets</dfn> (if your project has such assets), <dfn class="terminology">view</dfn> the result to make sure it looks good, and when you are ready, <dfn class="terminology">deploy</dfn> your web output to a live webpage for others to marvel at.</div> <div class="para" id="ch-workflow-2-2">In this chapter we will walk through the steps to do this inside a codespace environment.</div></section><section class="section" id="sec-build-and-generate"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.1</span><span class="space"> </span><span class="title">Build and Generate</span>
 </h3>
+<div><a href="" class="xref" data-knowl="annotate/sec-build-and-generate.html" data-reveal-label="Open" data-close-label="Close">View Source</a></div>
 <div class="para logical" id="sec-build-and-generate-2">
 <div class="para">Inside the VS Code window you opened through codespaces, have a <code class="code-inline tex2jax_ignore">.ptx</code> file open.  You can build your entire project in a few different ways.</div>
 <ul class="disc">
@@ -268,6 +270,7 @@ eBookConfig.enable_chatcodes =  false;
 <article class="note remark-like" id="sec-build-and-generate-3"><h4 class="heading">
 <span class="type">Note</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
 </h4>
+<div><a href="" class="xref" data-knowl="annotate/sec-build-and-generate-3.html" data-reveal-label="Open" data-close-label="Close">View Source</a></div>
 <div class="para" id="sec-build-and-generate-3-1">All shortcuts listed in this guide assume you are using Windows or Linux.  If you are using a Mac, you will need to use <code class="code-inline tex2jax_ignore">CMD</code> instead of <code class="code-inline tex2jax_ignore">CTRL</code>.</div></article><div class="para logical" id="sec-build-and-generate-4">
 <div class="para">If your documentment contains some more complicated elements, you might need to <dfn class="terminology">generate</dfn> them for them to show up.  The elements that require this are (depending on what your build target is):</div>
 <ul class="disc">
@@ -284,6 +287,7 @@ eBookConfig.enable_chatcodes =  false;
 <article class="note remark-like" id="sec-build-and-generate-6"><h4 class="heading">
 <span class="type">Note</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
 </h4>
+<div><a href="" class="xref" data-knowl="annotate/sec-build-and-generate-6.html" data-reveal-label="Open" data-close-label="Close">View Source</a></div>
 <div class="para logical" id="sec-build-and-generate-6-1">
 <div class="para">Note that generating assets requires additional software, like <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> or Sage.  Depending on your codespace setup, you can likely fix erorrs as follows.</div>
 <ol class="decimal">
@@ -297,6 +301,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></article></section><section class="section" id="sec-previewing"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.2</span><span class="space"> </span><span class="title">Previewing</span>
 </h3>
+<div><a href="" class="xref" data-knowl="annotate/sec-previewing.html" data-reveal-label="Open" data-close-label="Close">View Source</a></div>
 <div class="para logical" id="sec-previewing-2">
 <div class="para">You can check the output of what you built using the <dfn class="terminology">View</dfn> command.  Again, you can access this in multiple ways. If you use the PreTeXt Commands menu ans select “view”, you will get a choice for your viewer.  We currently suggest using “Live Preview”, although on codespace this requires a few extra steps:</div>
 <ol class="decimal">
@@ -309,6 +314,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="sec-previewing-4">When you make edits to your source files, you will need to build again, and then refresh the preview window to see the changes.</div></section><section class="section" id="sec-saving"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.3</span><span class="space"> </span><span class="title">Saving your work</span>
 </h3>
+<div><a href="" class="xref" data-knowl="annotate/sec-saving.html" data-reveal-label="Open" data-close-label="Close">View Source</a></div>
 <div class="para" id="sec-saving-2">Using codespaces will keep all your files “in the cloud” on GitHub’s server.  As long as you don’t delete your codespace, your files will be saved there.  However, you will want to <dfn class="terminology">push</dfn> these files to your <dfn class="terminology">git repository</dfn> on GitHub to make this save perminent.  This has the benefit of allowing collaborators to access your files as well (your codespace is unique to your account).</div>
 <div class="para" id="sec-saving-3">There is a <em class="emphasis">lot</em> to learn about git, but luckily using VS Code lets you do everything you need using menus (you don’t need to use the command line, unless you want to).  Everything can be controlled using the <dfn class="terminology">Source Control</dfn> view: it should be third from the top on the very left of the window, an icon with splitting paths, and likely a badge showing how many files you have changed.</div>
 <div class="para logical" id="sec-saving-4">
@@ -336,6 +342,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="sec-saving-9">In particular, we do not track the output of builds.  Git is used to track progress on your source, which you build into output at any time.  If you want others to be able to see the output of your work without building it themselves, you need to deploy your work.</div></section><section class="section" id="sec-deploy"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.4</span><span class="space"> </span><span class="title">Deploy</span>
 </h3>
+<div><a href="" class="xref" data-knowl="annotate/sec-deploy.html" data-reveal-label="Open" data-close-label="Close">View Source</a></div>
 <div class="para" id="sec-deploy-2">So you have worked tirelessly to prepare course notes or a book, built and previewed, synced changes using git, and now you are ready to share the results of your efforts with the world.  It’s time to <dfn class="terminology">deploy</dfn> your project.</div>
 <div class="para" id="sec-deploy-3">With our codespace setup this is simple.  From the “PreTeXt Commands” menu, click on “Deploy”.  This will automatically take the most recent build of your web target and host it through <a class="external" href="https://pages.github.com/" target="_blank">GitHub Pages</a><details class="ptx-footnote" aria-live="polite" id="sec-deploy-3-4"><summary class="ptx-footnote__number" title="Footnote 3.4.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-deploy-3-4"><code class="code-inline tex2jax_ignore">pages.github.com/</code></div></details>.  Watch the output pane for a link to your published site. (It can take a few minutes for the site to get set up or updated; there should be another link to view the progress of the GitHub “action” that reports the progress.)</div></section></section></div>
 <div class="ptx-content-footer">
