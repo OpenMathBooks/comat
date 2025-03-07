@@ -2,8 +2,9 @@
   "xml.fileAssociations": [
     {
       "pattern": "**/source/**.ptx",
-      "systemId": "/home/vscode/.ptx/schema/pretext-dev.rng"
+      "systemId": "/home/oscar/.vscode/extensions/oscarlevin.pretext-tools-0.25.0/assets/schema/pretext-dev.rng"
     }
   ],
-  "pretext-tools.installPretext": false
+  "pretext-tools.installPretext": false,
+  "cSpell.languageSettings": []
 }

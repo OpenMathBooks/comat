@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96pt" height="68pt" viewBox="0 0 96 68" version="1.1">
-<g id="surface1">
-<path style="fill-rule:nonzero;fill:rgb(100%,0%,0%);fill-opacity:0.2;stroke-width:0.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:0.2;stroke-miterlimit:10;" d="M 32.598969 0.00066652 C 32.598969 18.003493 18.005219 32.600273 0.0013125 32.600273 C -18.002594 32.600273 -32.60025 18.003493 -32.60025 0.00066652 C -32.60025 -18.00216 -18.002594 -32.59894 0.0013125 -32.59894 C 18.005219 -32.59894 32.598969 -18.00216 32.598969 0.00066652 Z M 32.598969 0.00066652 " transform="matrix(1,0,0,-1.00006,33.694,34.399104)"/>
-<path style="fill-rule:nonzero;fill:rgb(0%,0%,100%);fill-opacity:0.2;stroke-width:0.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:0.2;stroke-miterlimit:10;" d="M 60.946625 0.00066652 C 60.946625 18.003493 46.348969 32.600273 28.345062 32.600273 C 10.341156 32.600273 -4.252594 18.003493 -4.252594 0.00066652 C -4.252594 -18.00216 10.341156 -32.59894 28.345062 -32.59894 C 46.348969 -32.59894 60.946625 -18.00216 60.946625 0.00066652 Z M 60.946625 0.00066652 " transform="matrix(1,0,0,-1.00006,33.694,34.399104)"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="96" height="68" viewBox="0 0 96 68">
+<g>
+<path transform="matrix(1,0,0,-1.00006,33.694,34.3991)" d="M32.59865 0C32.59865 18.00395 18.00395 32.59865 0 32.59865-18.00395 32.59865-32.59865 18.00395-32.59865 0-32.59865-18.00395-18.00395-32.59865 0-32.59865 18.00395-32.59865 32.59865-18.00395 32.59865 0ZM0 0" fill="#ff0000" fill-opacity=".2"/>
+<path transform="matrix(1,0,0,-1.00006,33.694,34.3991)" stroke-width=".3985" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" stroke-opacity=".2" d="M32.59865 0C32.59865 18.00395 18.00395 32.59865 0 32.59865-18.00395 32.59865-32.59865 18.00395-32.59865 0-32.59865-18.00395-18.00395-32.59865 0-32.59865 18.00395-32.59865 32.59865-18.00395 32.59865 0ZM0 0"/>
+</g>
+<g>
+<path transform="matrix(1,0,0,-1.00006,33.694,34.3991)" d="M60.94545 0C60.94545 18.00395 46.35077 32.59865 28.3468 32.59865 10.34283 32.59865-4.25183 18.00395-4.25183 0-4.25183-18.00395 10.34283-32.59865 28.3468-32.59865 46.35077-32.59865 60.94545-18.00395 60.94545 0ZM28.3468 0" fill="#0000ff" fill-opacity=".2"/>
+<path transform="matrix(1,0,0,-1.00006,33.694,34.3991)" stroke-width=".3985" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" stroke-opacity=".2" d="M60.94545 0C60.94545 18.00395 46.35077 32.59865 28.3468 32.59865 10.34283 32.59865-4.25183 18.00395-4.25183 0-4.25183-18.00395 10.34283-32.59865 28.3468-32.59865 46.35077-32.59865 60.94545-18.00395 60.94545 0ZM28.3468 0"/>
 </g>
 </svg>
