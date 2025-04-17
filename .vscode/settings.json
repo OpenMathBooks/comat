@@ -2,7 +2,7 @@
   "xml.fileAssociations": [
     {
       "pattern": "**/source/**.ptx",
-      "systemId": "/home/oscar/.vscode/extensions/oscarlevin.pretext-tools-0.25.0/assets/schema/pretext-dev.rng"
+      "systemId": "/home/codespace/.vscode-remote/extensions/oscarlevin.pretext-tools-0.27.1/assets/schema/pretext-dev.rng"
     }
   ],
   "pretext-tools.installPretext": false,
